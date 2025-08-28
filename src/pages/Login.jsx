@@ -15,9 +15,9 @@ const Login = () => {
 
       {/* Main content div */}
       <div className='flex items-center justify-center min-h-screen px-6 sm:px-0'>
-        <div className='bg-white p-8 rounded-3xl shadow-xl w-full max-w-lg'>
-          <h2 className='text-2xl font-bold text-gray-800 text-center'>{state === 'Sign Up' ? 'Create Account' : 'Login'}</h2>
-          <p className='text-gray-600 mt-2 text-center'>{state === 'Sign Up' ? 'Create Your Account' : 'Login to your account!'}</p>
+        <div className='bg-slate-800 p-8 rounded-lg border-2 border-gray-600 shadow-xl w-full max-w-md'>
+          <h2 className='text-3xl font-bold text-white text-center'>{state === 'Sign Up' ? 'Create Account' : 'Login'}</h2>
+          <p className='text-gray-400 mt-2 text-center'>{state === 'Sign Up' ? 'Create your account' : 'Login to your account!'}</p>
 
           <form className='mt-6 space-y-4'>
             {state === 'Sign Up' && (
@@ -29,7 +29,7 @@ const Login = () => {
             
             <div className='flex items-center gap-3 px-5 py-3 rounded-full bg-[#333A5C]'>
               <img src={assets.mail_icon} alt="email icon" />
-              <input type="email" placeholder='Email Address' required className='flex-1 bg-transparent text-white placeholder-gray-300 outline-none' />
+              <input type="email" placeholder='Email id' required className='flex-1 bg-transparent text-white placeholder-gray-300 outline-none' />
             </div>
             
             <div className='flex items-center gap-3 px-5 py-3 rounded-full bg-[#333A5C]'>
@@ -37,16 +37,11 @@ const Login = () => {
               <input type="password" placeholder='Password' required className='flex-1 bg-transparent text-white placeholder-gray-300 outline-none' />
             </div>
             
-            {state === 'Sign Up' && (
-              <div className='flex items-center gap-3  px-5 py-3 rounded-full bg-[#333A5C]'>
-                <img src={assets.lock_icon} alt="confirm password icon" />
-                <input type="password" placeholder='Confirm Password' required className='flex-1 bg-transparent text-white placeholder-gray-300 outline-none' />
-              </div>
-            )}
+            <p>Forgot password?</p>
             
-            <div className='mt-6'>
-              <button type="submit" className='py-4 rounded-full bg-gray-100 text-black font-semibold border-2 border-black hover:bg-gray-200 transition-colors'>
-                {state === 'Sign Up' ? 'Create Account' : 'Get Started'}
+            <div className='mt-6 flex justify-center'>
+              <button type="submit" className=' py-4 rounded-full bg-gray-100 text-black font-semibold border-2 border-black hover:bg-gray-200 transition-colors'>
+                {state === 'Sign Up' ? 'Sign' : 'Get Started'}
               </button>
             </div>
             
